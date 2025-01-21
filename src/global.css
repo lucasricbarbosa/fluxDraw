@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-flow__panel a {
+  display: none;
+}
+
+.funnel {
+  position: relative;
+  width: 164px; /* Define a largura do topo do trapézio */
+  height: 120px; /* Altura do conteúdo interno */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.funnel::before {
+  content: '';
+  position: absolute;
+  top: 0; /* Agora posicione na parte superior do contêiner */
+  left: 0;
+  width: 100%; /* Ocupa a largura total do elemento pai */
+  height: 0;
+  border-radius: 8px;
+  border-top: 120px solid #2563eb; /* Define a altura e a cor do trapézio */
+  border-left: 25px solid transparent; /* Borda inclinada da esquerda */
+  border-right: 25px solid transparent; /* Borda inclinada da direita */
+  z-index: -1; /* Fica atrás do conteúdo */
+}
+
+
+.ToolbarRoot {
+  overflow-x: auto; /* Certifique-se de que o overflow está configurado */
+}
+
+.ToolbarRoot::-webkit-scrollbar {
+  height: 6px; /* Altura da scrollbar, se for horizontal */
+}
+
+.ToolbarRoot::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Cor do fundo da scrollbar */
+  border-radius: 10px; /* Arredondar as bordas do fundo */
+}
+
+.ToolbarRoot::-webkit-scrollbar-thumb {
+  background: #2563eb; /* Cor da barra de rolagem */
+  border-radius: 8px; /* Arredondar as bordas da barra */
+}
+
+.ToolbarRoot::-webkit-scrollbar-thumb:hover {
+  background: #3f75e8; /* Cor da barra quando hover */
+}
+
+
+/* Losango -=-=-=-=-=-=-=-=-=-=-==-=-=- */
+.losango-container {
+  position: relative;
+  min-width: 164px; /* Largura mínima */
+  min-height: 132px; /* Altura mínima */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.losango-container::before,
+.losango-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-left: 82px solid transparent; /* Metade da largura mínima */
+  border-right: 82px solid transparent; /* Metade da largura mínima */
+}
+
+.losango-container::before {
+  bottom: 65.5px; /* Ajustado para manter a proporção */
+  border-bottom: 66px solid #ea580c; /* Cor do losango */
+}
+
+.losango-container::after {
+  top: 65.5px; /* Ajustado para manter a proporção */
+  border-top: 66px solid #ea580c; /* Cor do losango */
+}
+
+.text-container {
+  position: absolute;
+  z-index: 1; /* Garante que o texto fique acima */
+  text-align: center;
+  padding: 0 4px; /* Adiciona um pouco de padding */
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-==-=-=- */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 24.6 95.0% 53.1%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 24.6 95.0% 53.1%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

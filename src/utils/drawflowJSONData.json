@@ -1,0 +1,237 @@
+{
+    "title": "Título do projeto",
+    "nodes": [
+      {
+        "id": "start-node",
+        "type": "diamond",
+        "position": {
+          "x": 240,
+          "y": 585
+        },
+        "data": {
+          "label": "Início do Processo"
+        },
+        "measured": {
+          "width": 194,
+          "height": 132
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 194,
+        "height": 132,
+        "resizing": false
+      },
+      {
+        "id": "task-1",
+        "type": "square",
+        "position": {
+          "x": 270,
+          "y": 330
+        },
+        "data": {
+          "label": "Coletar Dados"
+        },
+        "measured": {
+          "width": 144,
+          "height": 96
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "decision-1",
+        "type": "circle",
+        "position": {
+          "x": 600,
+          "y": 600
+        },
+        "data": {
+          "label": "Dados Completos?"
+        },
+        "measured": {
+          "width": 197,
+          "height": 96
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 197,
+        "height": 96,
+        "resizing": false
+      },
+      {
+        "id": "task-2",
+        "type": "square",
+        "position": {
+          "x": 1125,
+          "y": 330
+        },
+        "data": {
+          "label": "Analisar Dados"
+        },
+        "measured": {
+          "width": 144,
+          "height": 96
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "end-node",
+        "type": "diamond",
+        "position": {
+          "x": 615,
+          "y": 855
+        },
+        "data": {
+          "label": "Processo Concluído"
+        },
+        "measured": {
+          "width": 164,
+          "height": 132
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "image-node",
+        "type": "image",
+        "position": {
+          "x": 1470,
+          "y": 555
+        },
+        "data": {
+          "imageUrl": "https://www.ludeka.com.br/image/cache/data/componentes/D-06/d6-26mm-branco-200x200.jpg",
+          "altText": "Imagem Exemplo",
+          "label": "Imagem"
+        },
+        "measured": {
+          "width": 200,
+          "height": 200
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "87495b72-d0a5-4917-9857-930d4a778d6c",
+        "type": "text",
+        "position": {
+          "x": 855,
+          "y": 210
+        },
+        "data": {
+          "label": "Exemplo de fluxograma"
+        },
+        "measured": {
+          "width": 191,
+          "height": 24
+        },
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "6b309d50-6a41-4703-a9af-577723c20120",
+        "type": "stickyNote",
+        "position": {
+          "x": 345,
+          "y": 810
+        },
+        "data": {
+          "label": "Use as anotações para informações adicionais"
+        },
+        "measured": {
+          "width": 142,
+          "height": 124
+        },
+        "width": 142,
+        "height": 124,
+        "resizing": false,
+        "selected": false,
+        "dragging": false
+      },
+      {
+        "id": "f2977887-91f0-4efb-bf67-4c0eec7a4dda",
+        "type": "stickyNote",
+        "position": {
+          "x": 990,
+          "y": 780
+        },
+        "data": {
+          "label": "Você pode redimensionar todos os elementos"
+        },
+        "measured": {
+          "width": 143,
+          "height": 100
+        },
+        "selected": false,
+        "dragging": false,
+        "width": 143,
+        "height": 100,
+        "resizing": false
+      },
+      {
+        "id": "b66b6006-92c3-4d3d-b606-fdff44a96c11",
+        "type": "text",
+        "position": {
+          "x": 1440,
+          "y": 495
+        },
+        "data": {
+          "label": "Você pode adicionar imagens"
+        },
+        "measured": {
+          "width": 244,
+          "height": 24
+        },
+        "selected": false,
+        "dragging": false
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge-1",
+        "source": "start-node",
+        "target": "task-1",
+        "type": "default",
+        "data": {
+          "label": "Iniciar Coleta"
+        }
+      },
+      {
+        "id": "edge-2",
+        "source": "task-1",
+        "target": "decision-1",
+        "type": "default",
+        "data": {
+          "label": "Coletados"
+        },
+        "selected": false
+      },
+      {
+        "id": "edge-3",
+        "source": "decision-1",
+        "target": "task-2",
+        "type": "default",
+        "data": {
+          "label": "Sim"
+        }
+      },
+      {
+        "id": "edge-4",
+        "source": "decision-1",
+        "target": "end-node",
+        "type": "default",
+        "data": {
+          "label": "Não"
+        }
+      },
+      {
+        "id": "edge-5",
+        "source": "task-2",
+        "target": "end-node",
+        "type": "default",
+        "data": {
+          "label": "Finalizar"
+        }
+      }
+    ]
+  }
